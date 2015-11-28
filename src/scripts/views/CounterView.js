@@ -7,6 +7,7 @@ export default class CounterView extends BaseView {
     this.container = document.createElement('span');
     this._node.appendChild(this.container);
     const button = document.createElement('button');
+    button.addEventListener('click', this._actions.incrementCounter);
     button.textContent = 'Click me';
     this._node.appendChild(button);
   }

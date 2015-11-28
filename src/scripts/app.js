@@ -18,4 +18,4 @@ const ratingView = connect(
   (state) => state.rating,
 );
 
-store.dispatch(loadRatingData());
+//store.dispatch(loadRatingData());

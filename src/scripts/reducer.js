@@ -5,6 +5,11 @@ export const RATING_UPDATE = 'RATING_UPDATE';
 
 export default function reducer(oldState, action) {
   switch (action.type) {
+    case INCREMENT_COUNTER:
+      return {
+        ...oldState,
+        counter: oldState.counter + 1,
+      }
     default:
       return oldState;
   }
@@ -13,5 +18,12 @@ export default function reducer(oldState, action) {
 export function incrementCounter() {
   return {
     type: INCREMENT_COUNTER,
+  }
+}
+
+export function loadRatingData() {
+  return {
+    types: [RATING_LOADING, RATING_LOADED],
+    //??????
   }
 }
