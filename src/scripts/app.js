@@ -1,3 +1,4 @@
+// rating.smartjs.academy/rating
 import {incrementCounter, loadRatingData, startLoadingRatingData} from './reducer';
 import store from './store';
 import CounterView from './views/CounterView';
@@ -18,4 +19,4 @@ const ratingView = connect(
   (state) => state.rating,
 );
 
-//store.dispatch(loadRatingData());
+store.dispatch(loadRatingData());
