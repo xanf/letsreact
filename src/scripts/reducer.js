@@ -5,6 +5,26 @@ export const RATING_UPDATE = 'RATING_UPDATE';
 
 export default function reducer(oldState, action) {
   switch (action.type) {
+    case RATING_LOADING:
+      return {
+        ...oldState,
+        rating: {
+          ...oldState.rating,
+          loading: true          ,
+        }
+      };
+
+    case RATING_LOADED:
+      return {
+        ...oldState,
+        rating: {
+          ...oldState.rating,
+          loading: false,
+          entities: action.data.records,
+        }
+      };
+
+
     case INCREMENT_COUNTER:
       return {
         ...oldState,
@@ -24,6 +44,9 @@ export function incrementCounter() {
 export function loadRatingData() {
   return {
     types: [RATING_LOADING, RATING_LOADED],
+    request: function () {
+      return fetch('http://rating.smartjs.academy/rating').then(r => r.json())
+    }
     //??????
   }
 }
