@@ -1,0 +1,33 @@
+{
+  "name": "smartjs-sith-db",
+  "version": "0.0.1",
+  "description": "smartjs-sith-db",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server",
+    "watch": "webpack --watch"
+  },
+  "author": "Yuri Strelets",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^5.8.34",
+    "babel-loader": "^5.3.3",
+    "copy-webpack-plugin": "^0.2.0",
+    "css-loader": "^0.21.0",
+    "extract-text-webpack-plugin": "^0.8.2",
+    "file-loader": "^0.8.4",
+    "html-webpack-plugin": "^1.6.2",
+    "js-yaml": "^3.4.3",
+    "less": "^2.5.3",
+    "less-loader": "^2.2.1",
+    "raw-loader": "^0.5.1",
+    "style-loader": "^0.13.0",
+    "webpack": "^1.12.1",
+    "webpack-dev-server": "^1.12.1",
+    "yargs": "^3.29.0"
+  },
+  "dependencies": {
+    "underscore": "^1.8.3"
+  }
+}
